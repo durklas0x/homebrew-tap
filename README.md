@@ -1,16 +1,16 @@
 # Durklas0x Tap
 
-## How do I install these formulae?
+## How do I install these casks?
 
-`brew install durklas0x/tap/<formula>`
+`brew install --cask durklas0x/tap/<cask>`
 
-Or `brew tap durklas0x/tap` and then `brew install <formula>`.
+Or `brew tap durklas0x/tap` and then `brew install --cask <cask>`.
 
 Or, in a `brew bundle` `Brewfile`:
 
 ```ruby
 tap "durklas0x/tap"
-brew "<formula>"
+cask "durklas0x/tap/<cask>"
 ```
 
 ## Caprine
