@@ -1,6 +1,6 @@
-# Durklas0x Tap
+# durklas0x Tap
 
-## How do I install these casks?
+## How do I install these packages?
 
 `brew install --cask durklas0x/tap/<cask>`
 
@@ -12,6 +12,28 @@ Or, in a `brew bundle` `Brewfile`:
 tap "durklas0x/tap"
 cask "durklas0x/tap/<cask>"
 ```
+
+## Discordo
+
+Install the [Discordo terminal client](https://github.com/ayn2op/discordo) from its
+latest source:
+
+```sh
+brew install --HEAD durklas0x/tap/discordo
+discordo
+```
+
+Discordo currently has no tagged releases, so this formula builds the upstream
+`main` branch with Go. Go is only required to build the executable.
+
+To check for and build a newer upstream commit:
+
+```sh
+brew update
+brew upgrade --fetch-HEAD durklas0x/tap/discordo
+```
+
+In a `Brewfile`, use `brew "durklas0x/tap/discordo", args: ["HEAD"]`.
 
 ## Caprine
 
