@@ -16,6 +16,7 @@ defaults:
 jobs:
   test-bot:
     strategy:
+      fail-fast: false
       matrix:
         os: [ macos-26 ]
         include:
@@ -49,12 +50,11 @@ jobs:
       - run: brew test-bot --only-setup
 
       - run: brew test-bot --only-tap-syntax
-      - run: brew test-bot --only-formulae
+      - name: Build and test Discordo HEAD
         if: github.event_name == 'pull_request'
-
-      - name: Upload bottles as artifact
-        if: always() && github.event_name == 'pull_request'
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
-        with:
-          name: bottles_${{ matrix.os }}
-          path: '*.bottle.*'
+        env:
+          TAP_NAME: ${{ steps.set-up-homebrew.outputs.tap-name }}
+        run: |
+          brew install --HEAD "$TAP_NAME/discordo"
+          brew test "$TAP_NAME/discordo"
+          brew audit --strict --online "$TAP_NAME/discordo"
