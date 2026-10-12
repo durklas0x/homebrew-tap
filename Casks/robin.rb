@@ -1,6 +1,6 @@
 cask "robin" do
-  version "1.0.0"
-  sha256 "ef53eec0df7d9314ab8eaf305a3c128fac11e83c0a79116e41963ff3ca8790fb"
+  version "1.0.1"
+  sha256 "48f7d83306d56a5ba31bffc25f760eee326df74687837f14666e0ca544414783"
 
   url "https://github.com/durklas0x/robin/releases/download/v#{version}/Robin-#{version}-universal.zip"
   name "Robin"
