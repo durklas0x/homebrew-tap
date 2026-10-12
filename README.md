@@ -42,6 +42,16 @@ The daily `brew bump` workflow checks this fork's latest stable GitHub release a
 opens a pull request when a new cask version is available. Merge that pull request
 to publish the update in this tap.
 
+## Robin
+
+[Robin](https://github.com/durklas0x/robin) is Finder’s little sidekick: an editable floating path bar and quick folder actions.
+
+```sh
+brew install --cask durklas0x/tap/robin
+```
+
+Requires macOS 14 or newer on Apple Silicon or Intel. See Robin’s [first-launch instructions](https://github.com/durklas0x/robin#first-launch) for macOS approval and enabling its Finder extension.
+
 ## Documentation
 
 `brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
